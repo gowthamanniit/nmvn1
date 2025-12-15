@@ -1,9 +1,123 @@
+function App()
+{
+  if(true)
+  {
+  var v=100
+  let l=200
+  const c=300
+  v++;
+  l++;
+  console.log("Let:"+l);
+  //c++
+  console.log("const:"+c);
+  }
+
+    return(
+      <>
+          <h1>variable : global : {v}</h1>
+          <h1>does not work let and const : because local</h1>   
+          <div id="res"></div>
+      </>
+    )
+}
+export default App
+/*
+function App()
+{
+  let myfun=(a,b,c)=>{
+    var tot=a+b+c
+    document.getElementById("res").innerHTML=`<h2>Total:${tot}</h2>`;
+  }
+  return(<>
+  
+  <h2>Arrow Function with parameter</h2>
+  <h3>Note: onClick C must be caps <br></br>don't use double qutoes </h3>
+  <h3>Note: in calling function must use parenthesis when passing args</h3>
+  <button onClick={()=>myfun(10,20,30)}>click me </button>
+  <div id="res"></div>
+  
+  </>)
+}
+export default App
+
+/*
+function App()
+{
+  let myfun=()=>{
+    document.getElementById("res").innerHTML="Congrats you clicked the button";
+  }
+  return(<>
+  
+  <h2>Arrow Function without parameter</h2>
+  <h3>Note: onClick C must be caps <br></br>don't use double qutoes </h3>
+  <h3>Note: in calling function don't use parenthesis when without passing args</h3>
+  <button onClick={myfun}>click me </button>
+  <div id="res"></div>
+  
+  </>)
+}
+export default App
+/*
+import myimg from './images/img1.jpg'
+function App()
+{
+  return(<>
+    <h2>Image Demo using path as expression</h2>
+    <img src={myimg} width="75%" height="auto" alt="path is wrong"></img>
+  </>)
+}
+export default App
+/*
+function App()
+{
+  var a=3100
+  var b=600
+  var c=400
+  return(
+    <>
+      <h2>Biggest Among 2 no's using conditional or ternaray operator</h2>
+      <h1>Biggest Number a or b:{a>b?a:b}</h1>
+      <h1>Biggest Number a or b or c:{(a>b && a>c) ?a:(b>c?b:c)}</h1>
+    </>
+  )
+}
+export default App
+/*
+function App(){
+  // javascript learned code
+  var a=10
+  var b=20
+  var c="Gowthaman"
+
+return(<>
+      <h1>Total:{a+b}</h1>
+      <marquee bgcolor='yellow'><font size='7'>{c}</font></marquee>
+  </>)
+} 
+export default App
+/*
 import React from "react";
-class App extends React.Component
+
+class Parent extends React.Component
 {
   render()
   {
     return(<>
+          <h1>This is parent Class</h1>
+          <h1>This is parent Class</h1>
+          <h1>This is parent Class</h1>
+          <h1>This is parent Class</h1>
+          <h1>This is parent Class</h1>
+
+    </>)
+  }
+}
+class App extends Parent
+{
+  render()
+  {
+    return(<>
+          <Parent/>
           <h1>Welcome to Class Components</h1>
           <h1>Welcome to Class Components</h1>
           <h1>Welcome to Class Components</h1>
